@@ -1,8 +1,10 @@
-package tests;
+package tests.browserstackTests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import drivers.BrowserstackMobileDriver;
+import drivers.LocalMobileDriver;
+import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -30,6 +32,8 @@ public class TestBase {
 
     @AfterEach
     public void afterEach() {
-       closeWebDriver();
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        closeWebDriver();
     }
 }

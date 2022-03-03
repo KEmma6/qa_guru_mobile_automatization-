@@ -1,7 +1,7 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import config.MobileConfig;
+import configs.MobileConfigBrowserstack;
 import io.appium.java_client.android.AndroidDriver;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +12,7 @@ import java.net.URL;
 
 public class BrowserstackMobileDriver implements WebDriverProvider {
 
-    MobileConfig mobileConfig = ConfigFactory.create(MobileConfig.class, System.getProperties());
+    MobileConfigBrowserstack mobileConfig = ConfigFactory.create(MobileConfigBrowserstack.class, System.getProperties());
 
     public static URL getBrowserstackUrl() {
         try {
