@@ -28,5 +28,7 @@ public class TestAndroid extends TestBase {
         step("Проверяем текст кнопки", () -> {
             $(MobileBy.id("org.wikipedia.alpha:id/login_button")).shouldHave(Condition.text("Log in"));
         });
+
+
     }
 }
